@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="Suivez ">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- case date -->
+        <div class="date bold font32 glassmorph w100 color justify-center"><!-- <p>27/02/2024</p> --></div>
+        <!-- case heure -->
+        <div class="heure bold font32 glassmorph w100 color justify-center"><!-- <p>14h41</p> --></div>
+        <!-- case lieu -->
+        <div class="lieu glassmorph w100 justify-center">
+           <!--  
+            <p class="font32"></p>
+            -->
+        </div>
+        <!-- case pluie -->
+        <div class="pluie glassmorph w100 justify-center direction-column">
+            <div class="picto-pluie parapluie"></div>
+            <p class="pluie-texte font24 color"><!-- 0 --> mm</p>
+        </div>
+        <!-- case temps -->
+        <div class="temps glassmorph w100 direction-column justify-center">
+            <p class="temps-texte font24 color">Ensoleillé</p>
+            <div class="picto-temps"></div>
+            <p class="temps-temperature bold font32 color">17 °C</p>
+        </div>
+        <!-- case jour-nuit -->
+        <div class="jour-nuit glassmorph w100 justify-center">
+            <div class="picto-jour-nuit"></div>
+        </div>
+        <!-- case vent -->
+        <div class="vent glassmorph w100 direction-column justify-center">
+            <div class="compass">
+                <div class="arrow"></div>
+            </div>
+            <p class="vent-vitesse font24 color"><!-- 25 km / heures --></p>
+        </div>
+        <!-- case prevision 24h -->
+        <div class="prevision24h-container container-carousel glassmorph w100">
+            <div class="slides" id="slides24h">
+                <!--  
+                <div class="prevision24h slide glassmorph direction-column">
+                    <div class="prevision24h-temps flex align-center">
+                        <div class="micro-picto thermometre"></div>
+                        <p class="prevision24h-texte font14 color">13 °C</p>
+                    </div>
+                    <div class="prevision24h-pluie flex align-center">
+                        <div class="micro-picto parapluie"></div>
+                        <p class="prevision24h-texte font14 color">0 mm</p>
+                    </div>
+                    <p class="prevision24h-heure font14 color">14h00</p>
+                </div>
+                -->
+            </div>
+        </div>
+        <!-- prevision 10j -->
+        <div class="prevision10j-container container-carousel glassmorph w100">
+            <div class="slides" id="slides10j">
+                <!--
+                <div class="prevision10j slide glassmorph direction-column">
+                    <p class="prevision10j-date bold font18 color">15/02/2024</p>
+                    <div class="picto10j"></div>
+                    <p class="prevision10j-t-max bold font18 color">21 °C</p>
+                    <p class="prevision10j-t-min font14 color">9 °C</p>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bold{
+    font-weight: bold;
+}
+.font32{
+    font-size: 32px;
+}
+.font24{
+    font-size: 24px;
+}
+.font18{
+    font-size: 18px;
+}
+
+.direction-column{
+    flex-direction: column;
+    gap: 16px;
+}
+.color{
+    color: black;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.flex{
+    display: flex;
+}
+.align-center{
+    align-items: center;
+}
+
+.glassmorph{
+    background: rgba(255, 255, 255, 0.39);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(101, 101, 101, 0.1);
+    backdrop-filter: blur(4.7px);
+    -webkit-backdrop-filter: blur(4.7px);
+    border: 1px solid rgba(255, 255, 255, 0.242);
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+
+.w100{
+    width: 100%;
+    height: 100%;
+}
+.mr20{
+    margin-right: 20px;
+}
+
+
+.container {  display: grid;
+    gap: 20px 20px; 
+    grid-auto-flow: row;
+    grid-template-columns: 0.5fr 0.8fr 0.5fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1.5fr;
+    grid-template-areas:
+      " jour-nuit date heure temps vent"
+      "lieu lieu pluie temps vent"
+      "prevision24h-container prevision24h-container prevision24h-container prevision24h-container prevision24h-container"
+      "prevision10j-container prevision10j-container prevision10j-container prevision10j-container prevision10j-container";
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-items: center;
+    align-items: center;
+}
+.back-cloud{
+    background-image: url(./meteo-assets/img/cloud.jpg);
+}
+.back-night{
+    background-image: url(./meteo-assets/img/night.jpg);
+}
+.back-rain{
+    background-image: url(./meteo-assets/img/rain.jpg);
+}
+.back-snow{
+    background-image: url(./meteo-assets/img/snow.jpg);
+}
+.back-sun{
+    background-image: url(./meteo-assets/img/sun.jpg);
+}
+.back-suncloud{
+    background-image: url(./meteo-assets/img/suncloud.jpg);
+}
+.back-thunder{
+    background-image: url(./meteo-assets/img/thunder.jpg);
+}
+  
+
+.jour-nuit { grid-area: jour-nuit;}
+.picto-jour-nuit{
+    width: 96px;
+    height: 96px;
+    background-image: url(./meteo-assets/img/daynight-pictos.png);
+    background-size: cover;
+}
+.jour{
+    background-position: 0 0;
+}
+.nuit{
+    background-position: -116px 0;
+}
+
+
+.date { grid-area: date; }
+  
+.heure { grid-area: heure; }
+   
+.lieu { grid-area: lieu; }
+  
+.pluie { grid-area: pluie; }
+.picto-pluie{
+    width: 48px;
+    height: 48px;
+    background-image: url(./meteo-assets/img/umbrella-black.svg);
+    background-size: cover;
+}
+
+.temps { grid-area: temps; }
+.picto-temps{
+    width: 131.33px;
+    height: 130.67px;
+    background-image: url(./meteo-assets/img/pictos-weather.png);
+    background-size: cover;
+    display: inline-block;
+}
+.thunder{
+    background-position: 0 0;
+}
+.rain{
+    background-position: 0 -132.67px;
+}
+.suncloud{
+    background-position: 0 -265.34px;
+}
+.cloud{
+    background-position: 0 -398.01px;
+}
+.sun{
+    background-position: 0 -663.35px;
+}
+.snow{
+    background-position: 0 -796.02px;
+}
+  
+
+.vent { grid-area: vent;}
+.compass{
+    width: 166.4px;
+    height: 166.4px;
+    background-image: url(./meteo-assets/img/compass.png);
+    background-size: cover;
+    position: relative;
+}
+.arrow{
+    width: 20.8px;
+    height: 122.85px;
+    background-image: url(./meteo-assets/img/compass-arrow.png);
+    background-size: cover;
+    position: absolute;
+    top: 21.775px;
+    left: 72.8px;
+    z-index: 1;
+    transform: rotate();
+}
+
+
+.prevision24h-container { grid-area: prevision24h-container;}
+.prevision24h{
+    width: 120px;
+}
+
+
+.micro-picto{
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    margin-right: 16px;
+}
+.parapluie{
+    background-image: url(./meteo-assets/img/umbrella-black.svg);
+}
+.thermometre{
+    background-image: url(./meteo-assets/img/thermometer-black.svg);
+}
+  
+
+.prevision10j-container { grid-area: prevision10j-container; }
+.prevision10j{
+    width: 150px;
+}
+.picto10j{
+    width: 96px;
+    height: 96px;
+    background-image: url(./meteo-assets/img/minipictos.png);
+    background-size: cover;
+}
+.mini-cloud{
+    background-position: 0 0;
+}
+.mini-sun{
+    background-position: -116px 0;
+}
+.mini-rain{
+    background-position: -232px 0;
+}
+.mini-suncloud{
+    background-position: -348px 0;
+}
+.mini-thunder{
+    background-position: -464px 0;
+}
+.mini-snow{
+    background-position: -580px 0;
+}
+
+
+.container-carousel{
+    padding: 8px 0;
+    /*On active le scroll sur X pour voir ce qui dépasse du container*/
+    overflow-x: scroll; 
+    
+    /*Permet d'arreter le scroll au début d'une vignette*/
+    scroll-snap-type: x mandatory;
+
+    /*Ebauche de customisation de la scrollbar (cf documentation si vous voulez aller plus loin)*/
+    scrollbar-color: rgba(109, 109, 109, 0.349) rgba(255, 255, 255, 0.39);
+    scrollbar-width: thin;
+}
+.slides{
+    display: flex;
+    flex-wrap: nowrap;
+    width: fit-content;
+    gap: 16px;
+    padding-left: 16px;
+}
+
+.slide{
+    /*Permet d'arreter le scroll au début d'une vignette, couplé avec le scroll-snaptype sur le parent*/
+    scroll-snap-align: start;
+    position: relative;
+    padding: 16px;
+}
+
+@media all and (min-width : 770px) and (max-width : 1096px){
+    .container{
+        height: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 0.8fr 1.5fr 1fr 1.5fr;
+        grid-template-areas:
+            "jour-nuit date heure"
+            "lieu lieu pluie"
+            "temps temps vent"
+            "prevision24h-container prevision24h-container prevision24h-container"
+            "prevision10j-container prevision10j-container prevision10j-container";
+    }
+}
+
+@media all and (min-width : 490px) and (max-width : 790px){
+    .container{
+        height: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.5fr 0.8fr 1.5fr 1fr 1.5fr;
+        grid-template-areas:
+            "date heure"
+            "lieu lieu"
+            "jour-nuit pluie"
+            "temps vent"
+            "prevision24h-container prevision24h-container"
+            "prevision10j-container prevision10j-container";
+    }
+}
+
+@media all and (min-width : 350px) and (max-width : 490px){
+    .container{
+        height: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.5fr 0.8fr 1.5fr 1fr 1.5fr;
+        grid-template-areas:
+            "date heure"
+            "lieu lieu"
+            "jour-nuit pluie"
+            "temps vent"
+            "prevision24h-container prevision24h-container"
+            "prevision10j-container prevision10j-container";
+    }
+    .font32{
+        font-size: 24px;
+    }
+    .font24{
+        font-size: 20px;
+    }
+    .font18{
+        font-size: 16px;
+    }
+    .compass{
+        width: 116.48px;
+        height: 116.48px;
+        background-image: url(./meteo-assets/img/compass.png);
+        background-size: cover;
+        position: relative;
+    }
+    .arrow{
+        width: 14.56px;
+        height: 86px;
+        background-image: url(./meteo-assets/img/compass-arrow.png);
+        background-size: cover;
+        position: absolute;
+        top: 15.24px;
+        left: 50.96px;
+        z-index: 1;
+        transform: rotate();
+    }
+}
+
+/* // spécial galaxy fold
+@media all and (max-width : 349px){
+    .container{
+        height: 100%;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 0.7fr 0.5fr 0.5fr 0.7fr 1fr 0.8fr 0.7fr 0.8fr 1.2fr;
+        grid-template-areas:
+            "jour-nuit"
+            "date"
+            "heure"
+            "lieu"
+            "temps"
+            "vent"
+            "pluie"
+            "prevision24h-container"
+            "prevision10j-container";
+    }
+    .font32{
+        font-size: 24px;
+    }
+    .font24{
+        font-size: 20px;
+    }
+    .font18{
+        font-size: 16px;
+    }
+    .compass{
+        width: 116.48px;
+        height: 116.48px;
+        background-image: url(./meteo-assets/img/compass.png);
+        background-size: cover;
+        position: relative;
+    }
+    .arrow{
+        width: 14.56px;
+        height: 86px;
+        background-image: url(./meteo-assets/img/compass-arrow.png);
+        background-size: cover;
+        position: absolute;
+        top: 15.24px;
+        left: 50.96px;
+        z-index: 1;
+        transform: rotate();
+    }
+}*/
