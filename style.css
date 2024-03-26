@@ -251,7 +251,7 @@
     /*Permet d'arreter le scroll au début d'une vignette, couplé avec le scroll-snaptype sur le parent*/
     scroll-snap-align: start;
     position: relative;
-    padding: 16px;
+    padding: 12px;
 }
 
 @media all and (min-width : 770px) and (max-width : 1096px){
